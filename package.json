@@ -1,0 +1,34 @@
+{
+  "name": "@lumo/hotel-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Lumo Hotel Agent — Amadeus-style hotel search, availability, and booking. Mock-first; swap to Amadeus Self-Service Hotel Search/Booking once test-to-prod promotion lands. Speaks the @lumo/agent-sdk contract so the Lumo shell can discover and dispatch to it.",
+  "scripts": {
+    "dev": "next dev -p 3004",
+    "build": "next build",
+    "start": "next start -p 3004",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "smoke": "tsx scripts/smoke.ts",
+    "clean": "rm -rf .next *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@lumo/agent-sdk": "git+https://github.com/Prasanth-Kalas/Lumo_Agent_SDK.git#cc90f7e5e2ba08729e1bff65e12d31b7b5f356b1",
+    "next": "14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.15",
+    "tsx": "^4.19.2",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=20.10.0"
+  }
+}
