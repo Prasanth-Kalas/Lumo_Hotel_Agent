@@ -8,11 +8,11 @@
  * surface (amadeus.ts re-exports only the commit-able operations).
  */
 
-import type { RoomOffer } from "./amadeus-stub.js";
+import type { RoomOffer } from "./amadeus-stub";
 
 // Reach into the same module-scoped offer store by re-importing the
 // private symbol. We intentionally export it only for this helper.
-import * as stub from "./amadeus-stub.js";
+import * as stub from "./amadeus-stub";
 
 // The offer store is module-private in amadeus-stub.ts. We expose a
 // peek helper here that re-derives the current state by calling back
@@ -32,7 +32,7 @@ void stub;
 // Re-export with the internal name so the route's dynamic import
 // surfaces a `__peekOffer` symbol (underscore-prefixed to signal
 // "internal — don't call from app code").
-export { peekOffer as __peekOffer } from "./amadeus-stub.js";
+export { peekOffer as __peekOffer } from "./amadeus-stub";
 
 // Type re-export for consumers that want to type-check a peeked offer.
 export type { RoomOffer };

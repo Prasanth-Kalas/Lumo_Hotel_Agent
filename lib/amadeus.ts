@@ -23,9 +23,9 @@ import {
   type CreateReservationArgs,
   type CreateReservationResult,
   type CancelReservationResult,
-} from "./amadeus-stub.js";
+} from "./amadeus-stub";
 
-import { amadeusEnabled } from "./amadeus-real.js";
+import { amadeusEnabled } from "./amadeus-real";
 
 export async function searchHotels(filters: SearchFilters): Promise<SearchResult[]> {
   if (amadeusEnabled()) {
@@ -55,7 +55,7 @@ export function cancelReservation(reservation_id: string): CancelReservationResu
   return stubCancelReservation(reservation_id);
 }
 
-export { canonicalHotelBookingSummary } from "./amadeus-stub.js";
+export { canonicalHotelBookingSummary } from "./amadeus-stub";
 export type {
   Hotel,
   RoomOffer,
@@ -74,4 +74,4 @@ export type {
   CreateReservationArgs,
   CreateReservationResult,
   CancelReservationResult,
-} from "./amadeus-stub.js";
+} from "./amadeus-stub";
